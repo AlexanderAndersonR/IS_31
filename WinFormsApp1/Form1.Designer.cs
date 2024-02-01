@@ -35,6 +35,7 @@
             textBox4 = new TextBox();
             textBox5 = new TextBox();
             textBox6 = new TextBox();
+            button_save = new Button();
             SuspendLayout();
             // 
             // button1
@@ -43,7 +44,7 @@
             button1.Name = "button1";
             button1.Size = new Size(75, 23);
             button1.TabIndex = 0;
-            button1.Text = "button1";
+            button1.Text = "Sorting";
             button1.UseVisualStyleBackColor = true;
             button1.Click += button1_Click;
             // 
@@ -90,11 +91,22 @@
             textBox6.Size = new Size(291, 136);
             textBox6.TabIndex = 6;
             // 
+            // button_save
+            // 
+            button_save.Location = new Point(495, 195);
+            button_save.Name = "button_save";
+            button_save.Size = new Size(75, 23);
+            button_save.TabIndex = 8;
+            button_save.Text = "Save";
+            button_save.UseVisualStyleBackColor = true;
+            button_save.Click += button_save_Click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(586, 259);
+            Controls.Add(button_save);
             Controls.Add(textBox6);
             Controls.Add(textBox5);
             Controls.Add(textBox4);
@@ -117,5 +129,6 @@
         private TextBox textBox4;
         private TextBox textBox5;
         private TextBox textBox6;
+        private Button button_save;
     }
 }

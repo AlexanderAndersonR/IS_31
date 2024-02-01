@@ -1,9 +1,11 @@
-using System.Text.RegularExpressions;
+//using System.Text.RegularExpressions;
 
 namespace WinFormsApp1
 {
+    
     public partial class Form1 : Form
     {
+        Form_save Form_Save { get; set; }
         int[] array = new int[5];
         public Form1()
         {
@@ -34,9 +36,19 @@ namespace WinFormsApp1
             array[3] = Convert.ToInt32(textBox4.Text);
             array[4] = Convert.ToInt32(textBox5.Text);
             BubbleSort();
+            textBox6.Clear();
             for (int i = 0; i < array.Length; i++)
             {
                 textBox6.Text += array[i].ToString() + "\r\n";
+            }
+        }
+
+        private void button_save_Click(object sender, EventArgs e)
+        {
+            if(Form_Save == null)
+            {
+                Form_Save = new Form_save(textBox6.Text);
+                Form_Save.ShowDialog();
             }
         }
     }
